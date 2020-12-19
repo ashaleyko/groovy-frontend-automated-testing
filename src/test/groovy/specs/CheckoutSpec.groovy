@@ -56,5 +56,8 @@ class CheckoutSpec extends BaseSpec {
 
         then: 'first order is displayed'
             orderHistoryPage.isFirstOrderDisplayed()
+
+        cleanup: 'user logs out'
+            orderHistoryPage.header.logoutUser()
     }
 }
