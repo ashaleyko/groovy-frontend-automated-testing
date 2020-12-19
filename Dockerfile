@@ -1,4 +1,4 @@
-FROM markhobson/maven-chrome:jdk-8
+FROM openjdk:8-slim
 
 COPY ./gradlew /testapp/gradlew
 COPY ./gradle /testapp/gradle

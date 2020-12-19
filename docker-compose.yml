@@ -6,3 +6,15 @@ services:
       - ./:/testapp
     entrypoint: /testapp/entrypoint.sh
     container_name: frontend-testapp
+    depends_on:
+      - chrome-standalone
+
+  chrome-standalone:
+    image: selenium/standalone-chrome:3.141.59-gold
+    container_name: chrome-standalone
+    logging:
+      driver: none
+    ports:
+      - "4444:4444"
+    volumes:
+      - /dev/shm:/dev/shm
