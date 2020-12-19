@@ -11,6 +11,10 @@ class OrderHistoryPage {
 
     Header header
 
+    OrderHistoryPage() {
+        this.header = new Header()
+    }
+
     Boolean isFirstOrderDisplayed() {
         firstOrder.isDisplayed()
     }

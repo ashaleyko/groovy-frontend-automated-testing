@@ -8,7 +8,7 @@ class ShoppingCartSpec extends BaseSpec {
 
     def 'anonymous user should add two products to shopping cart and remove them'() {
         given: 'main page opens'
-            MainPage mainPage = new MainPage().openMainPage()
+            MainPage mainPage = new MainPage().clearCookiesAndOpenMainPage()
 
         when: 'user adds first featured product to shopping cart'
             ShoppingCartPopUp shoppingCartPopUp = mainPage.product.addFirstFeaturedProductToCart()

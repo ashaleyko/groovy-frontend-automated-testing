@@ -12,7 +12,7 @@ class CheckoutSpec extends BaseSpec {
 
     def 'checkout should succeed for new user'() {
         given: 'login page opens'
-            LoginPage loginPage = new LoginPage().openLoginPage()
+            LoginPage loginPage = new LoginPage().clearCookiesAndOpenLoginPage()
 
         and: 'user submits email address and clicks create account button'
             SignUpPage signUpPage = loginPage.submitEmailAndClickCreate()

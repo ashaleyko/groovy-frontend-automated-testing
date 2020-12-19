@@ -9,7 +9,7 @@ class SearchSpec extends BaseSpec {
 
     def 'anonymous user should search using valid product category: #productCategory'() {
         given: 'main page opens'
-            MainPage mainPage = new MainPage().openMainPage()
+            MainPage mainPage = new MainPage().clearCookiesAndOpenMainPage()
 
         when: 'user submits search query for #productCategory and clicks search button'
             SearchPage searchPage = mainPage.header.submitQueryAndClickSearch(productCategory)

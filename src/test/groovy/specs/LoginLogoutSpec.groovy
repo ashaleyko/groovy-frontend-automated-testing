@@ -8,7 +8,7 @@ class LoginLogoutSpec extends BaseSpec {
 
     def 'user should log in with valid credentials and log out'() {
         given: 'main page opens'
-            MainPage mainPage = new MainPage().openMainPage()
+            MainPage mainPage = new MainPage().clearCookiesAndOpenMainPage()
 
         when: 'user clicks sign in button'
             LoginPage loginPage = mainPage.header.clickSignInButton()

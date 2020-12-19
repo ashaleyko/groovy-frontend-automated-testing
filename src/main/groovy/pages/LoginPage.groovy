@@ -5,6 +5,7 @@ import com.github.javafaker.Faker
 import pages.elements.Header
 
 import static com.codeborne.selenide.Selenide.$
+import static com.codeborne.selenide.Selenide.clearBrowserCookies
 import static com.codeborne.selenide.Selenide.open
 import static config.Config.getEnvConfig
 
@@ -24,7 +25,8 @@ class LoginPage {
         this.header = new Header()
     }
 
-    LoginPage openLoginPage() {
+    LoginPage clearCookiesAndOpenLoginPage() {
+        clearBrowserCookies()
         open(new URL(envConfig.baseURL() + '/index.php?controller=authentication'), LoginPage)
     }
 
