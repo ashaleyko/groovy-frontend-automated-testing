@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 cd /testapp
-./gradlew clean test
+./gradlew clean test -Dselenide.headless=true

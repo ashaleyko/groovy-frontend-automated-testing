@@ -25,5 +25,6 @@ dependencies {
 }
 
 test {
+    systemProperties System.properties
     testLogging { events 'started', 'passed', 'failed', 'skipped', 'standard_out', 'standard_error'}
 }

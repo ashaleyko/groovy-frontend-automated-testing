@@ -9,6 +9,5 @@ abstract class BaseSpec extends Specification {
 
     static {
         Configuration.timeout = 10000
-        Configuration.headless = true
     }
 }
